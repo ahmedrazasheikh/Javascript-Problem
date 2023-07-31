@@ -44,6 +44,35 @@ return - 1
 console.log(findMissingNumebr2([1,2,4,5,7]));
 
 
+// If want to find Multiple missing number 
+
+
+
+const findMissingNumber = ((params) => {
+  const number = params.length + 1;
+  const MissNumbers = [];
+
+  for (let i = 0; i < number; i++) {
+    if (!params.includes(i)) {
+      MissNumbers.push(i);
+    }
+  }
+
+  if (MissNumbers.length === 0) {
+    return -1; // No missing numbers
+  } else {
+    return MissNumbers;
+  }
+});
+
+const result = findMissingNumber([1, 3, 4, 5]);
+console.log(result); // Output: [0, 2]
+
+
+
+
+
+
 // Count Characters 
 
 // function countCharacters(str) {
